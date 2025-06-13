@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+
+  <!-- Poppins font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+
+  <title>Login</title>
+</head>
+
+<body>
+  
+  <main>
+
+    <section class="login-wrapper">
+
+      <div class="title-text">
+        <h1>Hello, <span class="gradient-text">stranger</span>!</h1>
+      </div>
+
+      <div class="login-card">
+
+        <div class="card-bg"></div>
+
+        <form id="login-form" action="#" novalidate>
+          <div class="field">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" required>
+            <small class="error-message"></small>
+          </div>
+
+          <div class="field">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" required>
+            <small class="error-message"></small>
+          </div>
+
+          <div class="field">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="6">
+            <small class="error-message"></small>
+          </div>
+
+          <div class="captcha">
+            <p><i>84e1MQ</i></p>
+            <input type="text" id="captcha" name="captcha" placeholder="enter CAPTCHA">
+          </div>
+          
+          <div class="button-wrapper">
+            <button type="submit" class="glowing-btn">Login</button>
+            <a href="register.html" class="btn glowing-btn">Register</a>
+          </div>
+          
+          <a href="loginHelp.html" class="forgot-pw-link">forgot password?</a>
+
+        </form>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
