@@ -1,28 +1,12 @@
-.glowing-btn {
-  background: var(--main-color);
-  color: var(--text-primary);
-  transition: 0.2s ease;
-}
-
-.btn {
-  border: 1px solid var(--divider);
-  background: var(--dark-surface);
-}
-
-.glowing-btn:hover,
-.glowing-btn:focus-visible {
-  color: var(--off-black);
-  background: var(--accent-color);
-  box-shadow: 0 0 32px var(--t-accent-color);
-}
-
 /* image carousel */
 .mainImage-border {
+  aspect-ratio: 16 / 9;
+  width: 100%;
   border-color: var(--divider) !important;
 }
 
 #mainImage {
-  width: 700px; height: 400px;
+  width: 100%; height: 100%;
   object-fit: cover;
   opacity: 1;
   transition: opacity 0.5s ease;
@@ -33,15 +17,16 @@
   opacity: 0;
 }
 
+/* prev, next arrows on the mainImage */
 button.btn-link {
+  cursor: pointer;
   background: transparent;
   border: none;
   outline: none;
 }
 
 button.btn-link:hover {
-  color: purple;
-  cursor: pointer;
+  color: var(--text-primary) !important;
 }
 
 /* radio buttons */

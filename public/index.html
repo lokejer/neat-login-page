@@ -28,12 +28,17 @@
     <header>
       <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container">
+
           <a class="navbar-brand text-heading" href="#">YourBrand</a>
           <button class="navbar-toggler text-heading border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <!-- navbar wrapper (background) -->
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav mb-2 mb-lg-0">
+
+              <!-- nav links -->
               <li class="nav-item mx-1">
                 <a class="nav-link text-heading" href="#">Home</a>
               </li>
@@ -43,21 +48,26 @@
               <li class="nav-item mx-1">
                 <a class="nav-link text-heading" href="#">Pricing</a>
               </li>
+
+              <!-- rainbow border sign-in button -->
               <li class="d-none d-lg-block nav-item ms-4 my-auto">
                 <a href="login.html" class="px-5 py-2 rainbow-btn">
                   <i class="fa-solid fa-circle-user"></i>
                   Sign In
                 </a>
               </li>
-              <li class="d-block d-lg-none nav-item mobile-signIn-link">
+
+              <li class="nav-item mx-1 d-block d-lg-none mobile-signIn-link">
                 <a href="login.html" class="nav-link text-heading">Sign In</a>
               </li>
             </ul>
           </div>
+
         </div>
       </nav>
     </header>
 
+    <!-- HERO SECTION -->
     <section id="hero-section" class="container min-vh-100 d-flex justify-content-center align-items-center">
 
       <div class="row align-items-center">
@@ -66,13 +76,14 @@
           <img class="img-fluid" src="assets/glass-icons/rocket.png" alt="glass rocket icon">
         </div>
 
+        <!-- brand name and description / slogan -->
         <div class="col-auto col-md order-md-1">
-          <h1 class="display-3 mb-3 gradient-text">YourBrand</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum necessitatibus quasi veniam ipsam aspernatur perferendis eum dolorem maxime doloribus eligendi tempora quo, inventore obcaecati deserunt tenetur libero perspiciatis voluptatem nesciunt laboriosam corrupti temporibus exercitationem, non corporis nemo? Adipisci, quos soluta.</p>
+          <h1 class="display-3 mb-3 gradient-text">Supercharge your learning.</h1>
+          <p class="fs-5 lh-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum necessitatibus quasi veniam ipsam aspernatur perferendis eum dolorem maxime doloribus eligendi tempora quo, inventore obcaecati deserunt tenetur libero perspiciatis voluptatem nesciunt laboriosam corrupti temporibus exercitationem, non corporis nemo? Adipisci, quos soluta.</p>
 
           <div class="button-wrapper">
-            <a href="#" class="px-3 py-2 fw-bold rounded glowing-btn">Get Started</a>
-            <a href="register.html" class="px-3 py-2 rounded btn glowing-btn">FAQ</a>
+            <a href="login.html" class="px-3 py-2 fs-5 fw-bold rounded glowing-btn">Get Started</a>
+            <a href="#FAQ-section" class="px-3 py-2 fs-5 rounded glowing-btn secondary-glowing-btn">FAQ</a>
           </div>
         </div>
 
@@ -80,7 +91,8 @@
 
     </section>
 
-    <section class="container-fluid d-flex flex-column justify-content-center align-items-center">
+    <!-- FEATURED SECTION -->
+    <section id="featured-section" class="container-fluid d-flex flex-column justify-content-center align-items-center">
 
       <div class="title-text">
         <h1>Featured</h1>
@@ -91,12 +103,12 @@
         <div class="position-relative d-flex align-items-center justify-content-center mb-3" style="max-width: 700px; width: 100%;">
           
           <!-- left arrow -->
-          <button id="prevBtn" class="btn btn-link position-absolute start-0" style="color: var(--off-black); z-index: 10;">
+          <button id="prevBtn" class="btn btn-link position-absolute start-0" style="color: var(--text-secondary); z-index: 10;">
             <i class="fa-solid fa-chevron-left fa-2x"></i>
           </button>
           
-          <!-- main Image -->
-          <div class="border rounded mainImage-border ">
+          <!-- mainImage -->
+          <div class="border rounded mainImage-border">
             <img
               id="mainImage"
               src="assets/cover.jpg"
@@ -106,12 +118,12 @@
           </div>
           
           <!-- right arrow -->
-          <button id="nextBtn" class="btn btn-link position-absolute end-0" style="color: var(--off-black); z-index: 10;">
+          <button id="nextBtn" class="btn btn-link position-absolute end-0" style="color: var(--text-secondary); z-index: 10;">
             <i class="fa-solid fa-chevron-right fa-2x"></i>
           </button>
         </div>
       
-        <!-- radio buttons showing image selected / # of images -->
+        <!-- radio buttons showing selected img / # of imgs -->
         <div class="radio-input m-4">
           <label class="label">
             <input type="radio" name="radio" checked />
@@ -130,7 +142,8 @@
 
     </section>
 
-    <section id="FAQ">
+    <!-- FAQ SECTION -->
+    <section id="FAQ-section">
 
       <div class="container my-5">
         <h2 class="mb-4">Frequently Asked Questions</h2>

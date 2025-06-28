@@ -16,11 +16,17 @@
 
 // image slider
 document.addEventListener('DOMContentLoaded', () => {
-  const images = [
+  const coverImages = [
     'assets/cover-1.jpg',
     'assets/cover-2.jpg',
     'assets/cover-3.jpg'
   ];
+
+  const images = [
+    'assets/ideas/hero-dark-1.webp',
+    'assets/ideas/hero-dark-2.webp',
+    'assets/ideas/hero-dark-3.webp'
+  ]
 
   let currentIndex = 0;
 
@@ -37,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // wait for fade-out to finish before changing src
     setTimeout(() => {
-      mainImage.src = images[currentIndex];
+      mainImage.src = coverImages[currentIndex];
       mainImage.classList.remove('fade-out');
     }, 300);
 
@@ -49,13 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   prevBtn.addEventListener('click', () => {
     let newIndex = currentIndex - 1;
-    if (newIndex < 0) newIndex = images.length - 1;
+    if (newIndex < 0) newIndex = coverImages.length - 1;
     updateImage(newIndex);
   });
 
   nextBtn.addEventListener('click', () => {
     let newIndex = currentIndex + 1;
-    if (newIndex >= images.length) newIndex = 0;
+    if (newIndex >= coverImages.length) newIndex = 0;
     updateImage(newIndex);
   });
 

@@ -100,4 +100,31 @@ p {
   color: transparent;
 }
 
+.glowing-btn {
+  background: var(--main-color);
+  color: var(--text-primary);
+  transition: 0.2s ease;
+}
+/* 
+.btn {
+  border: 1px solid var(--divider);
+  background: var(--dark-surface);
+} */
+
+.glowing-btn:hover,
+.glowing-btn:focus-visible {
+  color: var(--off-black);
+  background: var(--accent-color);
+  box-shadow: 0 0 32px var(--t-accent-color);
+}
+
+.secondary-glowing-btn {
+  background-color: var(--divider);
+}
+
+.secondary-glowing-btn:hover,
+.secondary-glowing-btn:focus-visible {
+  background-color: var(--accent-color);
+}
+
 /* bootstrap utils */
