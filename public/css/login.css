@@ -43,7 +43,7 @@
 .login-card::before, .login-card::after {
   content: '';
   position: absolute;
-  width: 101%; height: 101%;
+  width: 101%; height: 100.5%;
   top: 50%; left: 50%;
   translate: -50% -50%; 
   z-index: -2;

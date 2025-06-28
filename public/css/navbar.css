@@ -1,0 +1,86 @@
+.custom-navbar {
+  background-color: var(--dark-surface);
+  border-bottom: 1px solid var(--divider);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.navbar-brand:hover {
+  color: var(--main-color);
+}
+
+.nav-link {
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--main-color);
+}
+
+.btn-primary {
+  background-color: var(--main-color);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--highlight-2);
+}
+
+.navbar-toggler {
+  filter: invert(100%);
+}
+
+/* rainbow Sign-In button */
+.rainbow-btn {
+  cursor: pointer;
+  position: relative;
+  border: 1px solid var(--divider);
+  border-radius: 8px;
+  background-color: var(--dark-surface);
+  color: white;
+  transition: border-color 0.1s ease;
+  z-index: 1;
+}
+
+/* make pseudo-elements appear on hover */
+.rainbow-btn:hover { border: none; }
+.rainbow-btn:hover::before { opacity: 1; }
+.rainbow-btn:hover::after { opacity: 0.5; }
+
+.rainbow-btn::before,
+.rainbow-btn::after {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  inset: -1.5px;
+  border-radius: 8px;
+  z-index: -1;
+  background: linear-gradient(30deg, 
+    hsl(0, 100%, 50%),
+    hsl(60, 100%, 50%),
+    hsl(120, 100%, 50%),
+    hsl(180, 100%, 50%),
+    hsl(240, 100%, 50%),
+    hsl(300, 100%, 50%),
+    hsl(0, 100%, 50%)
+  );
+  background-size: 400% 100%;
+  animation: borderFlow 20s linear infinite;
+  transition: opacity 1s ease;
+}
+
+/* border shadow */
+.rainbow-btn::after {
+  inset: -3px;
+  filter: blur(20px);
+}
+
+@keyframes borderFlow {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0% 0%; }
+}

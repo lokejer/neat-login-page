@@ -1,11 +1,11 @@
 :root {
   /* Base Background */
-  --off-black: hsl(222, 20%, 5%);        /* #0a0c10 */
+  --off-black: hsl(222, 20%, 5%);         /* #0a0c10 */
   --dark-surface: hsl(220, 14%, 12%);     /* #1a1d23 */
   --elevated-surface: hsl(220, 15%, 20%); /* #2a2f38 */
 
   /* Main Colour */
-  --main-color: hsl(250.1, 100%, 69.6%);      /* #7e64ff */
+  --main-color: hsl(250.1, 100%, 69.6%);  /* #7e64ff */
 
   /* Accent Colours */
   --accent-color: #ffd044;
@@ -26,6 +26,34 @@
   --error: #f44336;
 }
 
+/* custom scrollbar */
+/* Modern custom scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  background: rgba(126, 100, 255, 0.4); /* --main-color with 40% opacity */
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(126, 100, 255, 0.8); /* more solid on hover */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(126, 100, 255, 0.4) transparent;
+}
+
+/* universal styles */
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -34,8 +62,9 @@
 
 body {
   width: 100vw; height: 100vh;
-  background-color: var(--off-black);
+  background-color: var(--dark-surface);
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 main {
@@ -43,12 +72,21 @@ main {
 }
 
 button {
-  font-family: 'Poppins', sans-serif;
   border: none;
 }
 
 a {
   text-decoration: none;
+}
+
+h1, h2 {
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+  word-spacing: 2px;
+  line-height: 30px
 }
 
 /* utils */
@@ -61,3 +99,5 @@ a {
   -webkit-background-clip: text;  /* webkit compatibility */
   color: transparent;
 }
+
+/* bootstrap utils */

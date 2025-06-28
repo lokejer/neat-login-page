@@ -1,0 +1,89 @@
+.glowing-btn {
+  background: var(--main-color);
+  color: var(--text-primary);
+  transition: 0.2s ease;
+}
+
+.btn {
+  border: 1px solid var(--divider);
+  background: var(--dark-surface);
+}
+
+.glowing-btn:hover,
+.glowing-btn:focus-visible {
+  color: var(--off-black);
+  background: var(--accent-color);
+  box-shadow: 0 0 32px var(--t-accent-color);
+}
+
+/* image carousel */
+.mainImage-border {
+  border-color: var(--divider) !important;
+}
+
+#mainImage {
+  width: 700px; height: 400px;
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+  position: relative;
+}
+
+#mainImage.fade-out {
+  opacity: 0;
+}
+
+button.btn-link {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+button.btn-link:hover {
+  color: purple;
+  cursor: pointer;
+}
+
+/* radio buttons */
+.radio-input .label input {
+  display: none;
+}
+
+.radio-input {
+  display: flex;
+  gap: 20px;
+}
+
+.radio-input .label {
+  display: flex;
+}
+
+.radio-input .label .check {
+  width: 18px; height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 3px solid transparent;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5),
+   -1px -1px 4px rgba(255, 255, 255, 0.5);
+}
+
+.radio-input .label input:checked + .check {
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5),
+   -1px -1px 4px rgba(255, 255, 255, 0.5),
+   inset 3px 3px 6px rgba(0, 0, 0, 0.5),
+   inset -1px -1px 4px rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+/* FAQ section */
+.accordion-button::after {
+  display: none;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+}

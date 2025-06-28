@@ -3,68 +3,209 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/login.css">
 
+  <!-- link bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/index.css">
+  
   <!-- Poppins font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap">
+
+  <!-- Font Awesome Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <title>Login</title>
 </head>
 
 <body>
-  
+
   <main>
 
-    <section class="login-wrapper">
-
-      <div class="title-text">
-        <h1>Hello, <span class="gradient-text">stranger</span>!</h1>
-      </div>
-
-      <div class="login-card">
-
-        <div class="card-bg"></div>
-
-        <form id="login-form" action="#" novalidate>
-          <div class="field">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" required>
-            <small class="error-message"></small>
+    <!-- NAV BAR -->
+    <header>
+      <nav class="navbar navbar-expand-lg custom-navbar">
+        <div class="container">
+          <a class="navbar-brand text-heading" href="#">YourBrand</a>
+          <button class="navbar-toggler text-heading border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item mx-1">
+                <a class="nav-link text-heading" href="#">Home</a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link text-heading" href="#">Features</a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link text-heading" href="#">Pricing</a>
+              </li>
+              <li class="d-none d-lg-block nav-item ms-4 my-auto">
+                <a href="login.html" class="px-5 py-2 rainbow-btn">
+                  <i class="fa-solid fa-circle-user"></i>
+                  Sign In
+                </a>
+              </li>
+              <li class="d-block d-lg-none nav-item mobile-signIn-link">
+                <a href="login.html" class="nav-link text-heading">Sign In</a>
+              </li>
+            </ul>
           </div>
+        </div>
+      </nav>
+    </header>
 
-          <div class="field">
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname" required>
-            <small class="error-message"></small>
-          </div>
+    <section id="hero-section" class="container min-vh-100 d-flex justify-content-center align-items-center">
 
-          <div class="field">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required minlength="6">
-            <small class="error-message"></small>
-          </div>
+      <div class="row align-items-center">
+        
+        <div class="col-4 offset-1 order-md-2">
+          <img class="img-fluid" src="assets/glass-icons/rocket.png" alt="glass rocket icon">
+        </div>
 
-          <div class="captcha">
-            <p><i>84e1MQ</i></p>
-            <input type="text" id="captcha" name="captcha" placeholder="enter CAPTCHA">
-          </div>
-          
+        <div class="col-auto col-md order-md-1">
+          <h1 class="display-3 mb-3 gradient-text">YourBrand</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum necessitatibus quasi veniam ipsam aspernatur perferendis eum dolorem maxime doloribus eligendi tempora quo, inventore obcaecati deserunt tenetur libero perspiciatis voluptatem nesciunt laboriosam corrupti temporibus exercitationem, non corporis nemo? Adipisci, quos soluta.</p>
+
           <div class="button-wrapper">
-            <button type="submit" class="glowing-btn">Login</button>
-            <a href="register.html" class="btn glowing-btn">Register</a>
+            <a href="#" class="px-3 py-2 fw-bold rounded glowing-btn">Get Started</a>
+            <a href="register.html" class="px-3 py-2 rounded btn glowing-btn">FAQ</a>
           </div>
-          
-          <a href="loginHelp.html" class="forgot-pw-link">forgot password?</a>
-
-        </form>
+        </div>
 
       </div>
 
     </section>
 
+    <section class="container-fluid d-flex flex-column justify-content-center align-items-center">
+
+      <div class="title-text">
+        <h1>Featured</h1>
+      </div>
+
+      <div class="container m-5 d-flex flex-column align-items-center">
+        <!-- main image with arrows wrapper -->
+        <div class="position-relative d-flex align-items-center justify-content-center mb-3" style="max-width: 700px; width: 100%;">
+          
+          <!-- left arrow -->
+          <button id="prevBtn" class="btn btn-link position-absolute start-0" style="color: var(--off-black); z-index: 10;">
+            <i class="fa-solid fa-chevron-left fa-2x"></i>
+          </button>
+          
+          <!-- main Image -->
+          <div class="border rounded mainImage-border ">
+            <img
+              id="mainImage"
+              src="assets/cover.jpg"
+              class="img-fluid rounded"
+              alt="Main Product Image"
+            />
+          </div>
+          
+          <!-- right arrow -->
+          <button id="nextBtn" class="btn btn-link position-absolute end-0" style="color: var(--off-black); z-index: 10;">
+            <i class="fa-solid fa-chevron-right fa-2x"></i>
+          </button>
+        </div>
+      
+        <!-- radio buttons showing image selected / # of images -->
+        <div class="radio-input m-4">
+          <label class="label">
+            <input type="radio" name="radio" checked />
+            <span class="check"></span>
+          </label>
+          <label class="label">
+            <input type="radio" name="radio" />
+            <span class="check"></span>
+          </label>
+          <label class="label">
+            <input type="radio" name="radio" />
+            <span class="check"></span>
+          </label>
+        </div>
+      </div>      
+
+    </section>
+
+    <section id="FAQ">
+
+      <div class="container my-5">
+        <h2 class="mb-4">Frequently Asked Questions</h2>
+      
+        <div class="accordion" id="faqAccordion">
+      
+          <!-- FAQ Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button 
+                class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                What is your return policy?
+                <i class="fa-solid fa-chevron-down ms-auto faq-icon"></i>
+              </button>
+            </h2>
+            <div 
+              id="collapseOne" 
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                Our return policy lasts 30 days... Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolorem molestias consequuntur debitis placeat dolorum! Modi quas amet, debitis necessitatibus, magni possimus deleniti natus perferendis iste sit facere quasi adipisci nemo vitae? Deserunt labore aliquam quas, debitis maxime est. Odio.
+              </div>
+            </div>
+          </div>
+      
+          <!-- FAQ Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button 
+                class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                How do I track my order?
+                <i class="fa-solid fa-chevron-down ms-auto faq-icon"></i>
+              </button>
+            </h2>
+            <div 
+              id="collapseTwo" 
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#faqAccordion"
+            >
+              <div class="accordion-body">
+                You can track your order by... Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus alias error voluptatibus et aspernatur facere cum. Laborum error excepturi dolorum dicta ratione perspiciatis maiores temporibus voluptatum rerum molestias? Quod, minus facere voluptatibus sint itaque numquam explicabo maxime quas laborum perferendis tenetur fuga asperiores quia id corrupti cumque consequatur architecto culpa sed dolorum unde. Iste ad minus culpa saepe cupiditate illum, aliquam modi ex rem atque provident distinctio excepturi vero incidunt.
+              </div>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+      
+    </section>
+
+    <section>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem eaque quos veritatis earum, sit incidunt impedit debitis atque. Beatae veritatis velit perspiciatis corrupti deserunt fuga, nisi repudiandae consequuntur quod architecto, quaerat quo necessitatibus expedita! Esse obcaecati sapiente aspernatur magni, deleniti excepturi dolorem minima, officiis nulla tempora expedita sint non hic reiciendis quisquam facilis sed totam voluptatem vitae? Cumque quae labore itaque inventore consectetur fugiat doloremque iure tempore alias repellat unde sunt molestiae aperiam voluptatem sequi magnam eveniet, fuga a tenetur et delectus. Dolorum fuga numquam unde, molestias vitae, earum pariatur reiciendis architecto quis laborum, dolores repellendus nulla velit ipsum aspernatur sed dolorem ratione doloribus perspiciatis consequatur? Perspiciatis voluptates dolore corporis sapiente non, earum necessitatibus quibusdam veniam at temporibus accusantium omnis consequuntur maiores cumque voluptatem, excepturi inventore saepe dicta recusandae fugit a. Non rem, iusto voluptates veniam dolorem error nihil reiciendis vitae officia sint eos quo? Nam quis quidem, et officiis eaque error alias dolor voluptas, molestiae velit perferendis consectetur pariatur harum, adipisci nisi nobis! Veniam ab assumenda consequatur, itaque nemo qui ratione voluptate, velit maxime eaque quos architecto saepe cumque vel aliquam, atque autem est placeat blanditiis. Quasi facere quidem molestias consectetur et cum aut deserunt! Suscipit unde aliquam odio voluptatibus, veritatis, sunt sit omnis laborum adipisci repellendus quos cum et reprehenderit nihil repudiandae impedit enim? A repellat iste, deserunt voluptatibus facere corporis. Quos, iste cumque nostrum amet laudantium in autem aut provident quas ad. Aperiam recusandae dolore eos vel ex aliquam rem harum! Alias tenetur fugit qui saepe dolorem, error illo porro, fugiat deleniti cum ipsum veniam? Debitis expedita, eveniet quo quod commodi culpa omnis molestias temporibus laboriosam suscipit quibusdam tempora minus provident pariatur sint voluptatem hic natus repellat eaque, architecto incidunt ut, iusto qui perspiciatis. Quod molestias rem atque itaque laboriosam dignissimos aliquam, enim sequi, obcaecati maiores culpa dolore ipsum unde! Doloremque rem nisi aperiam id similique molestiae, officiis cum ad non accusamus odio maiores dicta nemo inventore perferendis culpa ea cumque eligendi cupiditate aliquam doloribus quae! Inventore libero tempora atque reiciendis minima. Maiores dolor voluptas voluptate commodi voluptatem nisi eum nostrum exercitationem sunt voluptatum quia quae, numquam distinctio aperiam omnis minima vel totam ab laborum ullam ad autem! Repellat ratione facere, corporis eius molestiae culpa dignissimos ipsa, obcaecati, iure delectus dolores repudiandae est? Autem mollitia repellendus quaerat itaque? Ullam quaerat cum qui, delectus animi reprehenderit atque vel sit placeat commodi quis consequuntur? Repellendus impedit recusandae neque consequatur dicta enim nihil cum libero quibusdam illum, et totam iusto ipsa obcaecati provident id veritatis doloribus itaque! At nihil itaque, sunt quia porro quaerat magnam sequi architecto natus aut! Sit autem numquam, voluptatem quo quos corrupti incidunt sapiente voluptatum ratione maxime, delectus dolore nemo voluptate! Nemo expedita obcaecati aspernatur distinctio, qui modi deleniti animi dolore! Dolorum magni minus perferendis blanditiis distinctio sed reiciendis nemo aperiam quod, debitis eos labore cum excepturi rerum officia autem est accusantium tenetur pariatur veniam at? Illo atque, aut iusto voluptas perferendis debitis assumenda suscipit doloremque neque earum eos nisi cumque fuga! Veniam deleniti minima quidem quis enim magnam porro aspernatur voluptatum, earum recusandae laborum ex, aperiam culpa illo! Culpa sint eos recusandae similique magni veniam voluptate odit nam nemo blanditiis non omnis commodi at, aliquid modi provident error. Numquam harum adipisci nihil molestiae autem, odio perspiciatis! Illo cumque necessitatibus consectetur maxime laboriosam asperiores! Nihil ducimus architecto iure ad repellendus itaque nostrum asperiores delectus modi fugiat ipsa a, repellat iste neque ipsum, mollitia sunt quae odio rem. Ipsum officiis rerum nemo quisquam perferendis, beatae eos suscipit, consectetur perspiciatis, repellat mollitia! Magnam perferendis id magni optio, veniam, ipsam iure error labore dolores excepturi aspernatur? Non ad distinctio ex porro ab corporis facere doloribus, sit saepe! Deserunt omnis obcaecati, doloribus iste consectetur accusamus in laboriosam dicta aliquam perspiciatis optio pariatur? Quis quod, impedit reprehenderit consequuntur natus aut eum at et cumque voluptate quibusdam blanditiis, porro nihil exercitationem dicta atque veritatis maiores sunt vel rem nobis. Reprehenderit, odit ducimus, placeat sequi labore necessitatibus nobis voluptates sunt commodi, maxime ipsum nesciunt rerum eligendi eius deleniti perspiciatis sit incidunt ullam? Saepe consequatur nesciunt culpa harum, facilis officia qui, ut, adipisci sapiente velit et quidem facere sunt itaque tempore! Beatae, tempore. Delectus voluptas quibusdam facere id? Optio dolore atque aliquid, vel nulla est! Sunt repellendus ipsa laborum delectus hic! Commodi reprehenderit sint neque aut id in, adipisci veniam blanditiis. Natus ad praesentium hic error, tempora nostrum quae excepturi nam adipisci odit. Amet, nesciunt esse aut consequuntur incidunt pariatur iusto ex quisquam cumque officia natus itaque assumenda ipsam molestias, velit culpa eligendi aspernatur voluptatibus sint dolores nemo tenetur odio. Architecto vero nisi blanditiis alias exercitationem, corrupti quos ipsum saepe quidem! Placeat iure, ipsa nesciunt perspiciatis repellendus culpa corporis facilis odit iusto nisi inventore, optio est at deleniti aspernatur ab libero cumque illum eius magnam consectetur. Maxime voluptatibus cum natus nihil? Quod velit expedita sequi eius amet voluptas, ipsam quis facere vero harum ex, itaque iste ipsum omnis maxime odio ducimus reiciendis vitae voluptatibus ullam quidem. Ea quos eaque excepturi non rem, fugiat quis quod perspiciatis possimus quia odit libero, harum eos sequi tempore asperiores porro in nam. Veniam fuga quibusdam et perferendis voluptates ratione quas nobis totam non? Nemo odit nihil aliquid ea quas nostrum eos at nisi ex obcaecati animi, minima est. Minima a delectus similique corporis soluta nostrum molestiae sit sapiente quos velit voluptate molestias, veniam praesentium aspernatur excepturi, ut autem blanditiis, repudiandae aut! Accusantium, et est harum assumenda facere rerum commodi magnam doloremque eaque, recusandae repudiandae saepe ab numquam! Quibusdam magni nobis dicta eligendi cum et accusantium. Rerum repudiandae, consectetur veniam voluptatum animi quam maxime incidunt porro culpa beatae fuga, ipsum consequatur possimus? Aut natus dolore dolores unde architecto, repudiandae fuga temporibus inventore laborum, cupiditate quia incidunt? Dolorem voluptates accusantium officia sed beatae corporis expedita natus! Dolores, ipsam laudantium? Earum numquam quas ipsum repellendus aperiam unde ab veniam pariatur reprehenderit blanditiis fugit est, inventore quidem, sit nihil. Illum corrupti, esse quisquam nobis architecto facere, eius sequi fugit perferendis minus nesciunt veritatis. Beatae eum libero doloremque cum fuga. Distinctio, voluptatem pariatur!
+    </section>
+
   </main>
 
-  <script src="script.js"></script>
+  <!-- Bootstrap Bundle with Popper (needed for collapse) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/FAQ.js"></script>
 </body>
+
 </html>
