@@ -1,0 +1,72 @@
+/* title "Our Products" badge styles */
+.badge-product-card {
+  position: relative;
+  cursor: pointer;
+  padding: 0.3em 0.6em;
+  background: linear-gradient(to right, var(--main-color), var(--highlight-2));
+  backdrop-filter: blur(10px);
+  overflow: hidden; /* hides the slash */
+}
+
+.badge-product-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start off-screen */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: slash 2s ease-in-out infinite;
+}
+
+@keyframes slash {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+/* product card styling */
+.product-card {
+  background-color: var(--dark-surface);
+  border: 1px solid var(--divider);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card:hover { transform: translateY(-5px); }
+
+.card-title {
+  color: var(--text-heading);
+}
+
+/* View Product button */
+.btn-outline-light {
+  border-color: var(--divider);
+  color: var(--text-primary);
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus-visible {
+  background-color: var(--main-color);
+  color: #000;
+  border: none;
+}
+
+/* product image sizing */
+.product-img {
+  width: 100%; height: 400px;
+  object-fit: cover;
+}
+
+/* star color using Bootstrap Icons */
+.star-rating i {
+  color: var(--accent-color);
+}
+
+/* product modals (appears onclick View Product) styles */
+.product-modal .modal-image {
+  width: 800px; height: 500px;
+}

@@ -43,7 +43,7 @@
   transition: background 0.3s ease;
 }
 
-::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover { 
   background: rgba(126, 100, 255, 0.8); /* more solid on hover */
 }
 
@@ -89,6 +89,16 @@ p {
   line-height: 30px
 }
 
+/* back arrow animation for login and register pages */
+.back-arrow:hover i {
+  animation: bob 0.6s ease infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(-5px); }
+}
+
 /* utils */
 .gradient-text {
   background: linear-gradient(
@@ -105,11 +115,6 @@ p {
   color: var(--text-primary);
   transition: 0.2s ease;
 }
-/* 
-.btn {
-  border: 1px solid var(--divider);
-  background: var(--dark-surface);
-} */
 
 .glowing-btn:hover,
 .glowing-btn:focus-visible {
@@ -128,3 +133,6 @@ p {
 }
 
 /* bootstrap utils */
+.z-999 {
+  z-index: 999;
+}

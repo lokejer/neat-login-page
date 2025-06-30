@@ -99,7 +99,7 @@
 
 #login-form .field input {
   border: none;
-  border-bottom: 2px solid var(--main-color);
+  border-bottom: 2px solid rgba(126, 100, 255, 0.4);
   background: transparent;
   color: var(--text-primary);
   font-family: 'Poppins', sans-serif;
@@ -109,7 +109,7 @@
 
 #login-form .field input:focus {
   outline: none;
-  border-bottom: 2px solid var(--highlight-3);
+  border-bottom: 2px solid var(--main-color);
 }
 
 /* error messages - global, for all potential form elements to use */
@@ -170,7 +170,7 @@ input.error {
 /* Login and Register buttons */
 .button-wrapper .glowing-btn {
   display: inline-block;
-  width: 125px; height: 45px;
+  width: 100px; height: 45px;
 }
 
 .forgot-pw-link {
