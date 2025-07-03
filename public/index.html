@@ -74,10 +74,13 @@
     <!-- HERO SECTION -->
     <section id="hero-section" class="container min-vh-100 d-flex justify-content-center align-items-center offset-from-navbar">
 
+      <!-- background effect -->
+      <div id="constellation-bg"></div>
+
       <div class="row align-items-center">
         
         <div class="col-4 offset-1 order-md-2">
-          <img class="p-4 img-fluid" src="assets/glass-icons/rocket.png" alt="glass rocket icon"> <!-- py-4 shrinks the image a little -->
+          <img class="p-4 img-fluid hero-img" src="assets/glass-icons/rocket.png" alt="glass rocket icon"> <!-- py-4 shrinks the image a little -->
         </div>
 
         <!-- brand name and description / slogan -->
@@ -330,16 +333,32 @@
       
       <a 
         href="mailto:lokejer@gmail.com?subject=Interested%20to%20Collaborate"
+        id="contact"
         class="px-3 py-3 fs-2 border">
         Let's Get in Touch!
       </a>
 
     </section>
 
+    <!-- FOOTER -->
+    <footer class="footer bg-dark-surface text-secondary pt-4 pb-3 mt-5">
+      <div class="container">
+
+        <div class="footer-info mt-3 mt-md-0 small user-select-none text-center">
+          <p class="mb-1">&copy; 2025 YourBrand. All rights reserved.</p>
+          <p class="mb-0">Designed &amp; built with 💜 by Jerome.</p>
+        </div>
+    
+      </div>
+    </footer>    
+
   </main>
 
+  <!-- tsparticles CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
   <!-- Bootstrap Bundle with Popper (needed for collapse) -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/cosmic-bg-effect.js"></script>
   <script src="js/carousel.js"></script>
   <script src="js/FAQ.js"></script>
 </body>

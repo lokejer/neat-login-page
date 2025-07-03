@@ -27,7 +27,6 @@
 }
 
 /* custom scrollbar */
-/* Modern custom scrollbar for WebKit browsers */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -43,7 +42,8 @@
   transition: background 0.3s ease;
 }
 
-::-webkit-scrollbar-thumb:hover { 
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active { 
   background: rgba(126, 100, 255, 0.8); /* more solid on hover */
 }
 
@@ -87,6 +87,14 @@ p {
   color: var(--text-secondary);
   word-spacing: 2px;
   line-height: 30px
+}
+
+/* constellation background */
+#constellation-bg {
+  position: fixed;
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  z-index: -5;
 }
 
 /* back arrow animation for login and register pages */
