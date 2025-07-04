@@ -24,17 +24,17 @@
 /* links (Home, Catalog, Contact) */
 .nav-link {
   color: var(--text-primary);
-  transition: background-color 0.5 ease;
   position: relative;
 }
 
 .nav-link:hover,
 .nav-link:focus-visible {
   color: var(--text-primary);
-  background-color: hsla(250, 100%, 70%, 0.2);
 }
 
-.nav-link::before {
+/* solid purple underline */
+.nav-link::before,
+.nav-link::after {
   content: '';
   position: absolute;
   width: 100%; height: 3px;
@@ -42,11 +42,20 @@
   background: var(--main-color);
   transform: scaleY(0);
   transform-origin: bottom;
-  transition: transform 0.2s ease;
+  transition: transform 0.15s ease;
+}
+
+/* transparent purple background */
+.nav-link::after {
+  height: 100%;
+  background-color: hsla(250, 100%, 70%, 0.2);
+  transition: transform 0.15s ease;
 }
 
 .nav-link:hover::before,
-.nav-link:focus-visible::before {
+.nav-link:hover::after,
+.nav-link:focus-visible::before,
+.nav-link:focus-visible::after {
   transform: scaleY(1);
 }
 .btn-primary {
@@ -60,11 +69,6 @@
 
 .navbar-toggler {
   filter: invert(100%);
-}
-
-/* view cart button */
-.nav-item:nth-child(4) {
-  
 }
 
 .view-cart-btn {
